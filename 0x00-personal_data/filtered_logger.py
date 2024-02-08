@@ -6,7 +6,7 @@ import re
 import logging
 import os
 import mysql.connector
-PII_FIELDS = ('name', 'email', 'phone', 'ssn', 'password', 'ip', 'last_login', 'user_agent')
+PII_FIELDS = ["name", "email", "phone", "ssn", "password"]
 """ containing the fields from user_data.csv that are considered PII. """
 
 
@@ -53,11 +53,12 @@ def get_logger() -> logging.Logger:
 
 def get_db() -> mysql.connector.connection.MySQLConnection:
     """ returns a connector to the database """
-    return mysql.connector.connect(
-                    host=os.environ.get('PERSONAL_DATA_DB_HOST', 'localhost'),
-                    database=os.environ.get('PERSONAL_DATA_DB_NAME'),
-                    user=os.environ.get('PERSONAL_DATA_DB_USERNAME', 'root'),
-                    password=os.environ.get('PERSONAL_DATA_DB_PASSWORD', ''))
+    connector = mysql.connector.connect(
+        user=os.getenv('PERSONAL_DATA_DB_USERNAME', 'root'),
+        password=os.getenv('PERSONAL_DATA_DB_PASSWORD', ''),
+        host=os.getenv('PERSONAL_DATA_DB_HOST', 'localhost'),
+        database=os.getenv('PERSONAL_DATA_DB_NAME'))
+    return connector
 
 
 def main():
