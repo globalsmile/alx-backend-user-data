@@ -6,7 +6,7 @@ import re
 import logging
 import os
 import mysql.connector
-PII_FIELDS = ('name', 'email', 'phone', 'ssn', 'password')
+PII_FIELDS = ('name', 'email', 'phone', 'ssn', 'password', 'ip', 'last_login', 'user_agent')
 """ containing the fields from user_data.csv that are considered PII. """
 
 
