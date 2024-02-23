@@ -1,7 +1,7 @@
 # 0x08. User authentication service
 :open_file_folder: Specializations - Web Stack programming ― Back-end  
 :bust_in_silhouette: by Emmanuel Turlay, Staff Software Engineer at Cruise  
-:copyright: **[Holberton School](https://www.holbertonschool.com/)**  
+:copyright: **[ALX Africa](https://www.alxafrica.com/)**  
 :bookmark: authentication | python | user authentication | user authentication service
 
 ## Resources
@@ -51,5 +51,5 @@ pip3 install bcrypt
 * [x] 20. End-to-end integration test
 
 ## Software engineer
-Javier Andrés Garzón Patarroyo  
-:octocat: [GitHub](https://github.com/javierandresgp/)
+Mohammed Badmus		  
+:octocat: [GitHub](https://github.com/globalsmile/)
